@@ -1,0 +1,86 @@
+
+<script>
+ $(document).ready(function(){
+  $('.header__inline-menu ul li a span , .header__inline-menu ul li header-menu details summary span , .header__inline-menu ul li header-menu details  ul li a, .menu-drawer__navigation ul li a, .menu-drawer__navigation ul li details summary, .menu-drawer__navigation ul li details div div ul li a ').each(function(){
+    
+    var navItem = $(this).text().trim();
+
+    if (navItem === "Home" && $(this).find('img').length === 0 ){
+     var icon = '<img src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/home_icon_50b16f2a-5b86-4240-bfe8-9d496fd67500.png?v=1770953292"/>';
+     $(this).prepend(icon);
+   }
+   if (navItem === "Collection" && $(this).find('img').length === 0 ){
+     var icon = '<img id= "coll_icon" src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/collection_icon_a70da58b-f1d5-412b-a2d9-fb93ced2d2ce.jpg?v=1770958955"/>';
+     $(this).prepend(icon);
+   }
+   if (navItem === "Resistance Band" && $(this).find('img').length === 0 ){
+     var icon = '<img id= "coll_icon" src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/Resistance_bands.png?v=1759904210"/>';
+     $(this).prepend(icon);
+   }
+   if (navItem === "Dumbells" && $(this).find('img').length === 0 ){
+     var icon = '<img id= "coll_icon" src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/Dumbbells.png?v=1760509026"/>';
+     $(this).prepend(icon);
+   }
+   if (navItem === "Workout Gloves" && $(this).find('img').length === 0 ){
+     var icon = '<img id= "coll_icon" src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/Workout_gloves.png?v=1760596098"/>';
+     $(this).prepend(icon);
+   }
+   if (navItem === "Policies" && $(this).find('img').length === 0 ){
+     var icon = '<img id= "coll_icon" src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/policies_icon_218f4502-3aa5-40a1-a1cd-62e5aeddd3a5.jpg?v=1770961031"/>';
+     $(this).prepend(icon);
+   }
+   if (navItem === "Blog" && $(this).find('img').length === 0 ){
+     var icon = '<img id="blog_icon" src = "https://cdn.shopify.com/s/files/1/0783/9377/0228/files/blog_icon_68de721f-0421-4d3a-b306-6416ececa0fa.png?v=1770959162"/>';
+     $(this).prepend(icon);
+   }
+  });
+});
+
+</script>
+
+<style>
+  
+  .header__inline-menu ul li a span, 
+  .header__inline-menu ul li header-menu details summary span,
+  .header__inline-menu ul li header-menu details  ul li a,
+  .menu-drawer__navigation ul li a,
+  .menu-drawer__navigation ul li details summary,
+   .menu-drawer__navigation ul li details div div ul li a {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start !important;
+   gap: 2px;
+  }
+  .header__inline-menu ul li a span img,
+  .header__inline-menu ul li header-menu details summary span img,
+  .menu-drawer__navigation ul li a img,
+  .menu-drawer__navigation ul li details summary img,
+   .menu-drawer__navigation ul li details div div ul li a img{
+   width: 30px;
+   height:30px;
+  }
+  #blog_icon{
+     width: 15px;
+     height:15px;
+  }
+  #coll_icon{
+    width: 20px;
+    height:20px;
+  }
+  .header__inline-menu ul li header-menu details  ul li a {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start !important;
+   gap: 10px;
+   border-radius: 50%;
+  }
+  
+ 
+</style>
+
+{% comment %}
+ 
+To avoid duplication of Icons 
+ && $(this).find('img').length === 0 
+ 
+ {% endcomment %}

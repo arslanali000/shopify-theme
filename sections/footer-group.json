@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "custom_liquid_tViAr8": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        ".gradient {margin-bottom: -80px;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1440 320\"><path fill=\"#000000\" fill-opacity=\"1\" d=\"M0,128L288,160L576,128L864,96L1152,0L1440,128L1440,320L1152,320L864,320L576,320L288,320L0,320Z\"></path></svg>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_N4mrbk": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer-menu",
+            "open_accordion": true
+          }
+        },
+        "link_list_6JacGC": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Our Policies",
+            "menu": "our-policies",
+            "open_accordion": true
+          }
+        },
+        "text_iDjJnq": {
+          "type": "text",
+          "settings": {
+            "heading": "OUR MISSION",
+            "subtext": "<p>We believe in small daily actions that create big results. Our mission is to help you move, train, and live stronger — every single day.</p>",
+            "open_accordion": false
+          }
+        }
+      },
+      "block_order": [
+        "link_list_N4mrbk",
+        "link_list_6JacGC",
+        "text_iDjJnq"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "accordion_enable": true,
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "custom_payment_enable": true,
+        "custom_payment_providers": "EasyPaisa, paypal, paytm, visa",
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_tViAr8",
+    "footer"
+  ]
+}

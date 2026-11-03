@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_NEYPit": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_NVp4QN": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_YL9tDh": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_7UpCNQ": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NVp4QN",
+        "text_YL9tDh",
+        "buttons_7UpCNQ"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "{{ collection.metafields.custom.collection_image.value }}",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "custom_css": [
+        ".collection-hero--with-image .collection-hero__text-wrapper {display: none;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "bulk",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_64MBzX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_x6byK7": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.metafields.custom.collection | metafield_text: field: 'name' }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_Ynf3q3": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.description }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_x6byK7",
+        "text_Ynf3q3"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "subcollection_wKKQi9": {
+      "type": "subcollection",
+      "name": "Subcollections",
+      "settings": {
+        "subcollections": [],
+        "gradient_color": "linear-gradient(90deg, rgba(121, 251, 251, 1), rgba(68, 117, 249, 1) 48%, rgba(249, 72, 63, 0.7595) 100%)",
+        "collection_width": 200,
+        "scrollbar_color": "#ff6347",
+        "margin_block": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_NEYPit",
+    "banner",
+    "product-grid",
+    "rich_text_64MBzX",
+    "subcollection_wKKQi9"
+  ]
+}

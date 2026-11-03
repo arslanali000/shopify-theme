@@ -1,0 +1,8 @@
+{%- liquid
+  assign discount = 25
+  assign discounted_price = 100 | minus:discount
+  assign discount_multiplier = discounted_price | divided_by: 100.0
+  
+
+  -%}
+  <P> <b>Special Price for you: </b> {{ product.price| times: discount_multiplier |money }} </P>

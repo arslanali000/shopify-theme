@@ -1,0 +1,145 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+>
+<style>
+     .slideshow-container-{{ section.id }} {
+     width: 100%;
+     aspect-ratio: {{section.settings.aspect_ratio }};
+     background:rgb(235, 234, 227);
+     position: relative;
+
+    }
+    .image-wrapper-{{ section.id }} {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .image-wrapper-{{ section.id }}.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    pointer-events: auto;
+  }
+
+    .image-wrapper-{{ section.id }} .slide-image-1 {
+     width:100%;
+     height: auto;
+     object-fit: cover;
+     display: block;
+    }
+    .slideshow-control-buttons-{{ section.id }} .slideshow-nxt-btn-{{ section.id }},
+    .slideshow-control-buttons-{{ section.id }} .slideshow-prev-btn-{{ section.id }} {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(12px, 18px, 24px);
+      color: fff;
+      cursor: pointer;
+    }
+    .slideshow-control-buttons-{{ section.id }} .slideshow-nxt-btn-{{ section.id }}{
+     right: 1rem;
+    }
+    .slideshow-control-buttons-{{ section.id }} .slideshow-prev-btn-{{ section.id }} {
+     left: 1rem;
+    }
+</style>
+<div class="slideshow-container-{{ section.id }}">
+  {% for block in section.blocks %}
+    {% if block.settings.slide != blank %}
+      <div class="image-wrapper-{{ section.id }}">
+        {% assign widths = '300, 450, 600, 750, 900, 1050, 1350, 1500, 1650, 1800, 1900, 2000, 2500, 3000, 3500, 4000' %}
+        {% assign sizes = 'auto, (max-width: 749px) 100vw, (min-width: 750px) 100vw, 100vw' %}
+        {{
+          block.settings.slide
+          | image_url: width: 3840
+          | image_tag:
+            width: block.settings.slide.width,
+            height: block.settings.slide.height,
+            widths: widths,
+            sizes: sizes,
+            class: 'slide-image-1',
+            alt: block.settings.slide.alt
+        }}
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="slideshow-control-buttons-{{ section.id }}">
+    <i class="fa-solid fa-chevron-right slideshow-nxt-btn-{{ section.id }}"></i>
+    <i class="fa-solid fa-chevron-left slideshow-prev-btn-{{ section.id }}"></i>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let slides = document.querySelectorAll('.image-wrapper-{{ section.id }}');
+    let nxtBtn = document.querySelector('.slideshow-nxt-btn-{{ section.id }}');
+    let prevBtn = document.querySelector('.slideshow-prev-btn-{{ section.id }}');
+    let currIdx = 0;
+
+    function showSlides() {
+      slides.forEach(function (slide) {
+        slide.classList.remove('active');
+        slides[currIdx].classList.add('active');
+      });
+    }
+
+    function autoSlide() {
+      setTimeout(function () {
+        currIdx = (currIdx + 1) % slides.length;
+        showSlides();
+        autoSlide();
+      }, 3000);
+    }
+    showSlides();
+    autoSlide();
+    nxtBtn.addEventListener('click', function () {
+      currIdx = (currIdx + 1) % slides.length;
+      showSlides();
+    });
+    prevBtn.addEventListener('click', function () {
+      currIdx = (currIdx - 1 + slides.length) % slides.length;
+      showSlides();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Slideshow 1",
+  "settings": [
+    {
+      "type": "text",
+      "id": "aspect_ratio",
+      "label": "Enter your image aspect ratio here:",
+      "default": "16/9"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide",
+          "label": "Add Sideshow image",
+          "info": "Keep the aspect ratio of all images same"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow 1"
+    }
+  ]
+}
+{% endschema %}

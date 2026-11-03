@@ -1,0 +1,67 @@
+
+{% assign key = overlapping_star_count | times: 10 | round %}
+
+<style>
+    .overlapping-image-container {
+      position: relative;
+      width: 300px; 
+      height: 100px; 
+       
+      
+      
+    }
+
+    .image {
+      position: absolute;
+      width: 60px; 
+      height: 60px; 
+      border-radius: 50%;
+      @media screen and (max-width: 768px) {
+        width: 30px; 
+        height: 30px; 
+        
+      }
+    }
+
+    .image1 { top: 0; left: 0; }
+    .image2 { top: 0px; left: 30px; }
+    .image3 { top: 0px; left: 60px; }
+    .image4 { top: 0px; left: 90px; }
+    .image5 { top: 0px; left: 120px; }
+
+    .stars {
+      position: absolute;
+      top: 60px;
+      
+    }
+    @media screen and (max-width: 768px) {
+       .image1 { top: 0; left: 0; }
+    .image2 { top: 0px; left: 20px; }
+    .image3 { top: 0px; left: 40px; }
+    .image4 { top: 0px; left: 60px; }
+    .image5 { top: 0px; left: 80px; }
+    .stars img {
+      width: 60%;
+      height: 60%;
+      
+    }
+     
+   
+  }
+  </style>
+
+
+<div class="overlapping-image-container">
+   <div class= "Images">
+    <img src="{{ overlapping_image_1 | img_url: 'master' }}" alt="Image 1" class="image image1">
+    <img src="{{ overlapping_image_2 | img_url: 'master'}}" alt="Image 2" class="image image2">
+    <img src="{{ overlapping_image_3 | img_url: 'master'}}" alt="Image 3" class="image image3">
+    <img src="{{ overlapping_image_4 | img_url: 'master'}}" alt="Image 4" class="image image4">
+    <img src="{{ overlapping_image_5 | img_url: 'master'}}" alt="Image 5" class="image image5">
+   </div>
+    <div class="stars"><img
+      src="{{ 'rating-' | append: key | append: '.png' | asset_url }}" 
+      alt="{{ overlapping_star_count }} rating"
+      > {{ overlapping_star_count }}
+   </div>
+ </div>

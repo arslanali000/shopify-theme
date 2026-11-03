@@ -1,0 +1,119 @@
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<style>
+    .accordion-container-{{ section.id }} {
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .single-accordion {
+      margin-bottom: 10px;
+    }
+    .single-accordion button {
+      width: 100%;
+      position: relative;
+      padding: 15px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      text-align: left;
+      cursor: pointer;
+    }
+    .single-accordion button span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .single-accordion button svg {
+      position: absolute;
+      height: 20px;
+      right: 20px;
+    }
+    .accordion-content {
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .show{
+      display: inline-block;
+    }
+    .hide{
+      display: none;
+    }
+   
+    @media (max-width: 480px) {
+      .single-accordion button span {
+        font-size: 14px;
+      }
+      .size-6 {
+        width: 20px;
+        height: 20px;
+      }
+      .single-accordion button svg {
+      height: 15px;
+      right: 10px;
+    }
+    }
+  </style>
+
+
+  <div class="accordion-container-{{ section.id }}" x-data="{ open: 0 }" x-init="$refs.content.scrollHeight">
+   {% for block in section.blocks %}
+     <div class="single-accordion">
+       <button @click="open !== {{ forloop.index }} ? open = {{ forloop.index }} : open = null">
+           <svg x-bind:class="open === {{ forloop.index }} ? 'hide' : 'show'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+           </svg>
+         <svg x-bind:class="open === {{ forloop.index }} ? 'show' : 'hide'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+         </svg>
+         <span>{{ block.settings.question }}</span>
+      </button>
+       <div class="accordion-content" x-ref="content"
+       x-bind:style="open === {{ forloop.index }} ? 'max-height: ' + $refs.content.scrollHeight + 'px' : 'max-height: 0px'">
+           <p>{{ block.settings.answer }}</p>
+         </div>
+
+    
+     </div>
+   {% endfor %}
+   </div>
+
+
+   {% schema %}
+   {
+    "name": "Accordions",
+    "settings": [],
+    "blocks": [
+     {
+      "name": "Accordion",
+      "type": "accordion",
+      "settings": [
+       {
+        "type": "text",
+        "id": "question",
+        "label": "Question",
+        "default":"put your Question here"
+       },
+       {
+        "type": "textarea",
+        "id": "answer",
+        "label": "Answer",
+        "default":"Write your Answer here"
+       }
+      ]
+     }
+
+    ],
+    "presets": [
+     {
+      "name": "Accordions"
+     }
+    ]
+   }
+
+   {% endschema %}

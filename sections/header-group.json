@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "marquee_section_r4UiQM": {
+      "type": "marquee-section",
+      "blocks": {
+        "text_JraAUD": {
+          "type": "text",
+          "settings": {
+            "new_text": "Welcome to store"
+          }
+        },
+        "text_WEwWAG": {
+          "type": "text",
+          "settings": {
+            "new_text": "JOIN THE PRIME ATHLETE COMMUNITY"
+          }
+        },
+        "text_V8z4Ca": {
+          "type": "text",
+          "settings": {
+            "new_text": "Get 10% OFF"
+          }
+        }
+      },
+      "block_order": [
+        "text_JraAUD",
+        "text_WEwWAG",
+        "text_V8z4Ca"
+      ],
+      "name": "Marquee",
+      "settings": {
+        "colorBackground": "#000",
+        "marquee_speed": 42,
+        "colorText": "#fff",
+        "link": "",
+        "marquee_height": 52,
+        "font_size": 16
+      }
+    },
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_eb4xGN": {
+          "type": "announcement",
+          "settings": {
+            "text": "JOIN THE PRIME ATHLETE COMMUNITY",
+            "link": ""
+          }
+        },
+        "announcement_yhGDPP": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_eb4xGN",
+        "announcement_yhGDPP"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 120px;}"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "color_scheme": "scheme-4",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        "h2 {font-size: 55px;}"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "menu-1",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "new_slideshow_wMN8B6": {
+      "type": "new-slideshow",
+      "blocks": {
+        "slide_Ltdf4H": {
+          "type": "slide",
+          "settings": {
+            "slide": "shopify://shop_images/Resistance_bands_in_action.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Ltdf4H"
+      ],
+      "disabled": true,
+      "name": "Slideshow 1",
+      "settings": {
+        "aspect_ratio": "16/9"
+      }
+    }
+  },
+  "order": [
+    "marquee_section_r4UiQM",
+    "announcement-bar",
+    "header",
+    "new_slideshow_wMN8B6"
+  ]
+}

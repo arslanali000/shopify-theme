@@ -1,0 +1,100 @@
+<style>
+ .collection-list-container-{{ section.id }}{
+width: 100vw;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap: 10px;
+
+
+}
+.collection-image-{{ section.id }}{
+height: 300px;
+width: 100%;
+object-fit: cover;
+cursor:pointer;
+}
+
+
+</style>
+
+
+<div class="collection-list-container-{{ section.id }}">
+   {%  for block in section.blocks %}
+    <a class="collection-link-{{ section.id }} " href="{{ block.settings.collection_url }}"></a>
+    <img class="collection-image-{{ section.id }}" src="{{ block.settings.collection_image | img_url:"" }}"/>
+   {% endfor %}
+
+</div>
+
+
+{% schema %}
+{
+"name": "Collection List A",
+"settings":[
+    {
+        "type": "header",
+        "content": "Image Setting",
+        
+    },{
+        "type": "range",
+        "id": "column_desktop",
+        "label": "Number of Columns",
+        "min": 2,
+        "max": 6,
+        "step": 1,
+        "unit": "px",
+        "default": 4
+    
+    },{
+        "type": "range",
+        "id": "image_height",
+        "label": "Image Height",
+        "min": 150,
+        "max": 600,
+        "step": 50,
+        "unit": "px",
+        "default": 300
+    
+    },{
+        "type": "header",
+        "content": "border Setting"
+
+    },{
+        "type": "range",
+        "id": "border_width",
+        "label": "Border Width",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "unit": "px",
+        "default": 1
+    
+    }
+],
+"blocks": [
+    {
+     "type": "collection-list",
+     "name": "collection",
+     "settings": [
+        {
+        "type": "image_picker",
+        "id": "collection_image",
+        "label": "Select Image"
+        },{
+        "type": "url",
+        "id": "collection_url",
+        "label": "Select URL"
+        }
+     ]
+    }
+
+],
+"presets": [
+    {
+    "name": "Collection List A"
+}
+]
+}
+
+{% endschema %}
+

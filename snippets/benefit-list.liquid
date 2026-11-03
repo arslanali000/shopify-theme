@@ -1,0 +1,154 @@
+<style>
+  .iconic___text--container {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .benefit__list_heading {
+    font-size: 18px; 
+    color: {{ block.settings.text_color }};
+    line-height: 1.3;
+  }
+
+ .iconic___text--container .icon__text-content{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+ }
+
+  .icon__text-content .iconic___text span {
+    color: {{ block.settings.text_color }};
+    font-weight: 500;
+    font-size: {{ block.settings.benefit_fs }}px;
+    line-height: {{ block.settings.svg_size }}px; /* Match SVG height */
+    vertical-align: middle; /* Ensure text aligns with SVG */
+  }
+
+  .icon__text-content .iconic__svg_icon svg {
+    width: {{ block.settings.svg_size }}px;
+    height:{{ block.settings.svg_size }}px;
+    color: {{ block.settings.svg_color }};
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+</style>
+
+
+ 
+<div class="iconic___text--container"> 
+
+{% if block.settings.benefit_heading != blank %}
+  <div class="benefit__list_heading">
+    {{ block.settings.benefit_heading }}
+  </div>
+{% endif %}  
+  
+  <div class="icon__text-content">
+  {% if block.settings.benefit_icon_1 != blank %}
+    <div class="iconic__svg_icon"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+       {{ block.settings.benefit_icon_1 }} 
+      </svg>
+    </div>  
+  {% endif %}
+   {% if block.settings.benefit_1 != blank %}
+    <div class="iconic___text">
+       <span>{{ block.settings.benefit_1 }}</span>
+    </div> 
+  {% endif %}
+ </div>
+
+<div class="icon__text-content">
+  {% if block.settings.benefit_icon_2 != blank %}
+    <div class="iconic__svg_icon"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        {{ block.settings.benefit_icon_2 }} 
+      </svg>
+    </div>  
+  {% endif %}
+    {% if block.settings.benefit_2 != blank %}
+    <div class="iconic___text">
+       <span>{{ block.settings.benefit_2 }}</span>
+    </div> 
+  {% endif %}
+ </div>
+
+<div class="icon__text-content">       
+  {% if block.settings.benefit_icon_3 != blank %}
+    <div class="iconic__svg_icon"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        {{ block.settings.benefit_icon_3 }} 
+      </svg>
+    </div>  
+  {% endif %}
+    {% if block.settings.benefit_3 != blank %}
+    <div class="iconic___text">
+       <span>{{ block.settings.benefit_3 }}</span>
+    </div> 
+  {% endif %}
+ </div>
+
+<div class="icon__text-content">     
+  {% if block.settings.benefit_icon_4 != blank %}
+     <div class="iconic__svg_icon"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        {{ block.settings.benefit_icon_4 }} 
+      </svg>
+    </div>  
+  {% endif %}
+    {% if block.settings.benefit_4 != blank %}
+    <div class="iconic___text">
+       <span>{{ block.settings.benefit_4 }}</span>
+    </div> 
+  {% endif %}
+</div>
+
+<div class="icon__text-content">        
+  {% if block.settings.benefit_icon_5 != blank %}
+    <div class="iconic__svg_icon"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        {{ block.settings.benefit_icon_5 }} 
+      </svg>
+    </div>  
+  {% endif %}
+    {% if block.settings.benefit_5 != blank %}
+    <div class="iconic___text">
+       <span>{{ block.settings.benefit_5 }}</span>
+    </div> 
+  {% endif %}
+ </div>
+          
+<div class="icon__text-content">
+  {% if block.settings.benefit_icon_6 != blank %}
+   <div class="iconic__svg_icon"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        {{ block.settings.benefit_icon_6 }} 
+      </svg>
+    </div>    
+  {% endif %}
+    {% if block.settings.benefit_6 != blank %}
+    <div class="iconic___text">
+       <span>{{ block.settings.benefit_6 }}</span>
+    </div> 
+  {% endif %}
+ </div>
+ <div class="icon__text-content">
+    {% if block.settings.benefit_icon_7 != blank %}
+     <div class="iconic__svg_icon"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+         {{ block.settings.benefit_icon_7 }}
+        </svg>
+      </div>    
+    {% endif %}
+    {% if block.settings.benefit_7 != blank %}
+      <div class="iconic___text">
+         <span>{{ block.settings.benefit_7 }}</span>
+      </div> 
+    {% endif %}
+  </div>
+</div> 
+
+
+

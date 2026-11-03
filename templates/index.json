@@ -1,0 +1,697 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Gear Up for  Everyday Fitness  </strong>",
+            "heading_size": "hxl"
+          }
+        },
+        "text_YUPrtm": {
+          "type": "text",
+          "settings": {
+            "text": "Shop quality fitness gear to level up your workouts.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_YUPrtm",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/arm-exercise.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "image_behavior": "ambient",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "left",
+        "show_text_below": true
+      }
+    },
+    "autoplay_slideshow_mniNAk": {
+      "type": "autoplay-slideshow",
+      "blocks": {
+        "banner_ChHrkB": {
+          "type": "banner",
+          "settings": {
+            "desktop_banner": "shopify://shop_images/Resistance_bands_in_action.png",
+            "mobile_banner": "shopify://shop_images/dm-adj-1.jpg",
+            "link": ""
+          }
+        },
+        "banner_P6hiCB": {
+          "type": "banner",
+          "settings": {
+            "desktop_banner": "shopify://shop_images/arm-exercise.jpg",
+            "mobile_banner": "shopify://shop_images/store_banner1.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_ChHrkB",
+        "banner_P6hiCB"
+      ],
+      "name": "Autoplay Banner",
+      "settings": {
+        "autoplay_speed": 5000,
+        "bullet_color": "#575b57",
+        "active_bullet_color": "#050505"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_HtDBCr": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_63JzkT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "resistance-band"
+          }
+        },
+        "featured_collection_jq4cPD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dumbbells-for-strength-training"
+          }
+        },
+        "featured_collection_zPNGcD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "workout-gloves"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_63JzkT",
+        "featured_collection_jq4cPD",
+        "featured_collection_zPNGcD"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_slider_WfiFGt": {
+      "type": "collection-slider",
+      "disabled": true,
+      "name": " Collection Slider",
+      "settings": {
+        "collection_slider": [
+          "resistance-band",
+          "dumbells",
+          "workout-gloves"
+        ],
+        "gradient_color": "linear-gradient(90deg, rgba(121, 251, 251, 1), rgba(68, 117, 249, 1) 48%, rgba(249, 72, 63, 0.7595) 100%)",
+        "collection_width": 200,
+        "scrollbar_color": "#ff6347",
+        "margin_block": 130
+      }
+    },
+    "featured_product_E8MmPL": {
+      "type": "featured-product",
+      "blocks": {
+        "text_9dKizP": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "rating_8EkexM": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_cVD4zp": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_9CBLRn": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_7KmJhX": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_fgMAQL": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_CaeEiP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "text_9dKizP",
+        "rating_8EkexM",
+        "title_cVD4zp",
+        "price_9CBLRn",
+        "variant_picker_7KmJhX",
+        "quantity_selector_fgMAQL",
+        "buy_buttons_CaeEiP"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "adjustable-dumbbells-set-for-home-gym-strength-training",
+        "color_scheme": "scheme-2",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "accordion_BNzyU4": {
+      "type": "accordion",
+      "blocks": {
+        "accordion_fUF49m": {
+          "type": "accordion",
+          "settings": {
+            "question": "What is the return policy?",
+            "answer": "Our return policy allows you to return products within 30 days of purchase. Please ensure that the items are in their original condition and packaging. For more details, please visit our return policy page."
+          }
+        },
+        "accordion_PU8nH7": {
+          "type": "accordion",
+          "settings": {
+            "question": "What is the return policy?",
+            "answer": "Our return policy allows you to return products within 30 days of purchase. Please ensure that the items are in their original condition and packaging. For more details, please visit our return policy page."
+          }
+        }
+      },
+      "block_order": [
+        "accordion_fUF49m",
+        "accordion_PU8nH7"
+      ],
+      "disabled": true,
+      "name": "Accordions",
+      "settings": {}
+    },
+    "scrolling_big_text_qnDMhq": {
+      "type": "scrolling-big-text",
+      "blocks": {
+        "scrolling_text_VXm4Bc": {
+          "type": "scrolling-text",
+          "settings": {
+            "scrolling_text": "Premium Products"
+          }
+        }
+      },
+      "block_order": [
+        "scrolling_text_VXm4Bc"
+      ],
+      "disabled": true,
+      "name": "Scrolling Text",
+      "settings": {
+        "bg_color": "linear-gradient(100deg, rgba(222, 222, 228, 1), rgba(63, 74, 81, 1) 100%)",
+        "font_size_desktop": 4,
+        "font_size_mb": 3,
+        "text_color": "#1e1e1e",
+        "icon_color": "#1e1e1e"
+      }
+    },
+    "tabbed_collection_aXJWQJ": {
+      "type": "tabbed-collection",
+      "blocks": {
+        "collection_cMenUN": {
+          "type": "collection",
+          "settings": {
+            "title": "Best Sellers",
+            "collection": "resistance-band",
+            "product_limit": 6,
+            "product_row_count": 3,
+            "mobile_product_row_count": 2,
+            "enable_swiper_on_mobile": true,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/resistance-band"
+          }
+        },
+        "collection_tQPtE6": {
+          "type": "collection",
+          "settings": {
+            "title": "New Arrivals",
+            "collection": "dumbbells-for-strength-training",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "collection_rfVxhN": {
+          "type": "collection",
+          "settings": {
+            "title": "Analog",
+            "collection": "",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "collection_KqKP8R": {
+          "type": "collection",
+          "settings": {
+            "title": "Objects",
+            "collection": "",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_cMenUN",
+        "collection_tQPtE6",
+        "collection_rfVxhN",
+        "collection_KqKP8R"
+      ],
+      "name": "SS - Featured Collections (tabs)",
+      "settings": {
+        "tabs_color": "#7e7e7e",
+        "tabs_color_active": "#000000",
+        "tabs_size": 18,
+        "tabs_size_mobile": 14,
+        "tabs_padding_bottom": 16,
+        "tabs_align": "center",
+        "tabs_spacing": 48,
+        "tabs_spacing_mobile": 36,
+        "tabs_margin_bottom": 40,
+        "secondary_image_hover": true,
+        "image_roundness": 0,
+        "image_gap": 20,
+        "product_title_size": 14,
+        "product_title_line_height": 1.3,
+        "product_title_color": "#212121",
+        "product_price_size": 14,
+        "discounted_price_color": "#ff3451",
+        "normal_price_color": "#212121",
+        "button_color": "#ffffff",
+        "button_background_color": "#000000",
+        "button_color_hover": "#ffffff",
+        "button_background_color_hover": "#000000",
+        "button_border_color": "#ffffff",
+        "button_height": 44,
+        "button_width": 200,
+        "button_font_size": 16,
+        "button_border_radius": 2,
+        "button_border_thickness": 0,
+        "background-color": "#ffffff",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 56,
+        "padding_bottom": 36,
+        "padding_sides": 5,
+        "padding_sides_mobile": 1.5,
+        "section-width": 120
+      }
+    },
+    "testimonial_section_btzpJa": {
+      "type": "testimonial_section",
+      "blocks": {
+        "testimonial_KaJKdP": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img2.webp",
+            "customer_name": "Natasha",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_rkK9cF": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img3.avif",
+            "customer_name": "Joseph",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_pteagG": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img4.jpg",
+            "customer_name": "Sophia",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_UHmBBp": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img.jpg",
+            "customer_name": "Emily",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_KaJKdP",
+        "testimonial_rkK9cF",
+        "testimonial_pteagG",
+        "testimonial_UHmBBp"
+      ],
+      "disabled": true,
+      "name": "Testimonials",
+      "settings": {}
+    },
+    "new_testimoniol_jX4xqh": {
+      "type": "new-testimoniol",
+      "blocks": {
+        "testimonial_slide_AMR6EV": {
+          "type": "testimonial-slide",
+          "settings": {
+            "image": "shopify://shop_images/reveiw-img5.avif",
+            "star_ratings": 5,
+            "author_name": "Natasha",
+            "review_body": "<p> The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!<br/><br/></p>"
+          }
+        },
+        "testimonial_slide_pcayKP": {
+          "type": "testimonial-slide",
+          "settings": {
+            "image": "shopify://shop_images/reveiw-img4.jpg",
+            "star_ratings": 3,
+            "author_name": "Sophia",
+            "review_body": "<p>I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!<br/><br/></p>"
+          }
+        },
+        "testimonial_slide_taji6T": {
+          "type": "testimonial-slide",
+          "settings": {
+            "image": "shopify://shop_images/reveiw-img.jpg",
+            "star_ratings": 4,
+            "author_name": "Emily",
+            "review_body": "<p>I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_slide_AMR6EV",
+        "testimonial_slide_pcayKP",
+        "testimonial_slide_taji6T"
+      ],
+      "name": "Testimonial Slider",
+      "settings": {
+        "show_border": false,
+        "top_star_color": "#ffd700",
+        "title": "Hear From Our Happy Customers",
+        "subtitle": "Real customers share why Flerixe has become their favorite brand to shop from.",
+        "title_font_weight": "700",
+        "title_fs_desktop": 3,
+        "title_fs_mobile": 2,
+        "slide_bg": "",
+        "author_fs_desktop": 1.2,
+        "author_fs_mobile": 0.8,
+        "author_color": "",
+        "review_fs_desktop": 1,
+        "review_fs_mobile": 0.8,
+        "review_color": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "trustbadge_style_1_6CzVab": {
+      "type": "trustbadge-style-1",
+      "blocks": {
+        "image_UFbb4T": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Free Shipping",
+            "feature_text": "Order today, receive tomorrow",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_eVMnya": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Price-match guarantee",
+            "feature_text": "Safe money when ordering with us",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_3Q7jNk": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Hassle-free exchange",
+            "feature_text": "Receive a slip for exchanges",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_4bPe7y": {
+          "type": "image",
+          "settings": {
+            "feature_title": "5.0 Google Reviews",
+            "feature_text": "Customer satisfaction #1 priority",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_UFbb4T",
+        "image_eVMnya",
+        "image_3Q7jNk",
+        "image_4bPe7y"
+      ],
+      "name": "Basic Trust Badges",
+      "settings": {
+        "feature_row": 4,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_vertical": 0,
+        "feature_padding_horizontal": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#ffffff",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "logo_slider_eeErzD": {
+      "type": "logo-slider",
+      "blocks": {
+        "logo_k4nUKh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/home_icon_50b16f2a-5b86-4240-bfe8-9d496fd67500.png"
+          }
+        },
+        "logo_NadzGY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/blog_icon_68de721f-0421-4d3a-b306-6416ececa0fa.png"
+          }
+        },
+        "logo_BEy4gU": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/policies_icon_218f4502-3aa5-40a1-a1cd-62e5aeddd3a5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "logo_k4nUKh",
+        "logo_NadzGY",
+        "logo_BEy4gU"
+      ],
+      "disabled": true,
+      "name": "Logo Slider",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "",
+        "title_font": "trirong_n4",
+        "fontsize": 30,
+        "fontsize_mobile": 20,
+        "marginbottom": 20,
+        "marginbottom_mobile": 20,
+        "padding_topbottom": 60,
+        "speed": 25,
+        "height": 50,
+        "height_mobile": 50
+      }
+    },
+    "multicolumn_HJmmH6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FTHeJW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/policies_icon_218f4502-3aa5-40a1-a1cd-62e5aeddd3a5.jpg",
+            "title": "Top Rated",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FTHeJW"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "autoplay_slideshow_mniNAk",
+    "featured_collection",
+    "collection_list_HtDBCr",
+    "collection_slider_WfiFGt",
+    "featured_product_E8MmPL",
+    "accordion_BNzyU4",
+    "scrolling_big_text_qnDMhq",
+    "tabbed_collection_aXJWQJ",
+    "testimonial_section_btzpJa",
+    "new_testimoniol_jX4xqh",
+    "trustbadge_style_1_6CzVab",
+    "logo_slider_eeErzD",
+    "multicolumn_HJmmH6"
+  ]
+}

@@ -1,0 +1,414 @@
+<style>
+    .gwp-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999999999;
+    }
+
+    /* styles for popup */
+
+    .gwp-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 10000000000;
+        min-width: 290px;
+    }
+
+    @media only screen and (max-width: 450px){
+        .gwp-popup {
+            min-width: 75%;
+        }
+    }
+
+    /* style for close button */
+
+    .gwp-popup-close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    input.gwp-button {
+        display: block;
+        margin: 0 auto;
+        font-size: 15px;
+        cursor: pointer;
+        background-color: {{ section.settings.butCol }};
+        color: {{ section.settings.butTextCol }};
+        padding: 7px 17px;
+        border-radius: 3px;
+        border: 1px solid {{ section.settings.butCol }};
+        transition: all 0.3s ease-out;
+    }
+
+    input.gwp-button:hover {
+        color: {{ section.settings.HovbutTextCol }};
+        background-color: {{ section.settings.HovbutCol }};
+        border: 1px solid {{ section.settings.HovbutTextCol }};
+    }
+
+    .gwp-title p {
+        text-align: center;
+        line-height: 1.2;
+        color: #000;
+        font-size: 16px;
+        padding-block: 10px;
+    }
+
+    @media only screen and (max-width: 600px){
+        .gwp-title p {
+            font-size: 14px;
+        }
+    }
+
+    img.gwp-gift-img {
+        width: 81px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        {% if section.settings.pDetails == false %}margin-bottom: 15px;{% endif %}
+    }
+
+    p.gwp-pt {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #000;
+        padding-top: 8px;
+        padding-bottom: 4px;
+        line-height: 1.3;
+        max-width: 400px;
+    }
+
+    p.gwp-pr {
+        display: block;
+        text-transform: uppercase;
+        color: #000;
+        margin: 0;
+    }
+
+    .gwp-strike {
+        padding-top: 0px !important;
+        text-decoration: line-through;
+    }
+
+    span.gwp-price {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        column-gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    .gwp-free {
+        font-weight: 600;
+    }
+
+    .GWPform {
+        text-align: center;
+    }
+
+    label.variantL {
+        display: block;
+        font-size: 12px;
+        color: #000;
+    }
+
+
+  .variantS {
+    max-width: 300px;
+    height: 30px;
+    width: fit-content;
+    min-width: 170px;
+    margin: 10px 0;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: capitalize;
+    outline: none; /* Removes the default outline */
+  }
+
+
+    .variantS:focus {
+        border: 1px solid #000; /* Add a consistent border color on focus */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for focus */
+    }
+
+    body.popup-open {
+        overflow: hidden;
+    }
+</style>
+
+{% if section.settings.price_trigger != 0 %}
+{% if section.settings.confetti == true %}
+<script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+{% endif %}
+
+<div class="gwp-overlay" id="gwp-overlay"></div>
+<div class="gwp-popup" id="gwp-popup">
+    <span class="gwp-popup-close" onclick="closePopup()">&#x2715;</span>
+    <span class="gwp-title">{{ section.settings.text }}</span>
+
+{% assign product = section.settings.free_item %}
+<input name="id" value="{% if section.settings.variantId != blank %}{{ section.settings.variantId }}{% else %}{{ section.settings.free_item.variants.first.id }}{% endif %}" type="hidden" />
+
+{% if section.settings.giftImg != blank %}
+    {{ section.settings.giftImg | image_url: width: 300 | image_tag: class: 'gwp-gift-img', alt: 'Gift Image' }}
+{% else %}
+    {% if section.settings.pDetails == true %}
+      {% if product.images.size > 0 %}
+        {% assign first_image_url = product.images.first.src | image_url: width: 300, height: 300 %}
+        <img loading="lazy" class="gwp-gift-img" width="300" height="300" src="{{ first_image_url }}" alt="{{ product.title }}" />
+      {% endif %}
+    {% endif %}
+{% endif %}
+
+{% if section.settings.pDetails == true %}
+    <p class="gwp-pt">{{ product.title }}</p>
+    <span class="gwp-price">
+        <p class="gwp-pr gwp-strike">{{ product.price | money }}</p>
+        <p class="gwp-pr gwp-free">Free</p>
+    </span>
+{% endif %}
+
+<form class="GWPform" method="post" action="/cart/add">
+    {% if section.settings.free_item.variants.size > 1 and section.settings.vSelector == true %}
+        <label class="variantL" for="variant-select">Select variant: </label>
+        <select class="variantS" id="variant-select" name="id">
+            {% for variant in section.settings.free_item.variants %}
+                <option value="{{ variant.id }}">{{ variant.title }}</option>
+            {% endfor %}
+        </select>
+    {% else %}
+        <input name="id" value="{% if section.settings.variantId != blank %}{{ section.settings.variantId }}{% else %}{{ section.settings.free_item.variants.first.id }}{% endif %}" type="hidden" />
+    {% endif %}
+
+    <input id="submitbutton" onclick="{% if section.settings.confetti == true %}confetti({zIndex: 999999999});{% endif %} this.disabled = true; this.form.submit();"
+    class="gwp-button" name="add" value="{{ section.settings.buttonText }}" type="submit" />
+</form>
+</div>
+
+<script>
+function fetchCartData(callback) {
+    fetch("/cart.js")
+        .then(response => response.json())
+        .then(data => callback(data))
+        .catch(error => console.error("Error fetching cart data:", error));
+}
+
+function hasZeroPriceProduct(cartData) {
+    return cartData.items.some(item => item.final_line_price === 0);
+}
+
+function calculateCartValue(cartData) {
+    let totalValue = 0;
+    cartData.items.forEach(item => {
+        totalValue += item.price * item.quantity;
+    });
+    return totalValue.toFixed(2);
+}
+
+function showPopup(cartValue) {
+    const overlay = document.getElementById("gwp-overlay");
+    const popup = document.getElementById("gwp-popup");
+    overlay.style.display = "block";
+    popup.style.display = "block";
+    document.body.classList.add("popup-open");
+}
+
+function closePopup() {
+    const overlay = document.getElementById("gwp-overlay");
+    const popup = document.getElementById("gwp-popup");
+    overlay.style.display = "none";
+    popup.style.display = "none";
+    document.body.classList.remove("popup-open");
+
+    if ({% if section.settings.oncepersession %}true{% else %}false{% endif %}) {
+        sessionStorage.setItem("popupShown", "true");
+    } else {
+        sessionStorage.removeItem("popupShown");
+    }
+}
+
+async function getProductTags(handle) {
+    try {
+        const response = await fetch(`/products/${handle}.js`);
+        if (!response.ok) throw new Error("Network response was not ok");
+        const product = await response.json();
+        return product.tags || [];
+    } catch (error) {
+        console.error("Error fetching product tags:", error);
+        return [];
+    }
+}
+
+async function hasTaggedProducts(cartData, tagToCheck) {
+    if (!cartData.items || cartData.items.length === 0 || !tagToCheck.trim()) return false;
+
+    for (const item of cartData.items) {
+        try {
+            const tags = await getProductTags(item.handle);
+            if (tags.includes(tagToCheck)) return true;
+        } catch (error) {
+            console.error("Error checking product tags:", error);
+        }
+    }
+    return false;
+}
+
+async function checkCartValue() {
+    try {
+        const cartData = await fetch("/cart.js").then(response => response.json());
+        const cartValue = calculateCartValue(cartData);
+        const hasZeroPrice = hasZeroPriceProduct(cartData);
+        const tagToCheck = "{{ section.settings.tagToTrigger }}";
+        const hasTaggedProduct = await hasTaggedProducts(cartData, tagToCheck.trim());
+        const popupShown = sessionStorage.getItem("popupShown") === "true";
+        const isOncePerSession = {% if section.settings.oncepersession %}true{% else %}false{% endif %};
+
+        if (parseFloat(cartValue) >= {{ section.settings.price_trigger | times: 100 }} && (!isOncePerSession || !popupShown) && !hasZeroPrice && hasTaggedProduct) {
+            showPopup(cartValue);
+            sessionStorage.setItem("popupShown", "true");
+        }
+    } catch (error) {
+        console.error("Error in checkCartValue:", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    checkCartValue();
+    document.addEventListener("click", () => setTimeout(checkCartValue, 1000));
+    document.addEventListener("keypress", () => setTimeout(checkCartValue, 100));
+});
+</script>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Free Gift Popup",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Popup trigger"
+    },
+    {
+      "type": "range",
+      "id": "price_trigger",
+      "label": "Price",
+      "min": 0,
+      "max": 5000,
+      "step": 50,
+      "unit": "$",
+      "default": 0,
+      "info": "The store currency applies. If the value is 0, the popup is disabled."
+    },
+    {
+      "type": "text",
+      "id": "tagToTrigger",
+      "label": "Product tag to trigger popup",
+      "info": "Specify the tag that a product must have to trigger the free gift popup."
+    },
+    {
+      "type": "header",
+      "content": "Gift item"
+    },
+    {
+      "type": "product",
+      "id": "free_item",
+      "label": "Product"
+    },
+    {
+      "type": "checkbox",
+      "id": "vSelector",
+      "label": "Show a variant selector",
+      "default": false,
+      "info": "Let the customer select their gift if the product has multiple variants."
+    },
+    {
+      "type": "text",
+      "id": "variantId",
+      "label": "Specify a variant ID",
+      "info": "Add a specific variant ID to use as a gift. Leave empty to use the first variant."
+    },
+    {
+      "type": "header",
+      "content": "Popup settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "confetti",
+      "label": "Show confetti on button click",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Popup text",
+      "default": "<p>🎉 Congratulations! You've unlocked a free gift</p>"
+    },
+    {
+      "type": "text",
+      "id": "buttonText",
+      "label": "Button Text",
+      "default": "REDEEM FREE GIFT"
+    },
+    {
+      "type": "checkbox",
+      "id": "oncepersession",
+      "label": "Show popup once per session",
+      "default": true,
+      "info": "If false, the popup will show again in the same session once the conditions are met."
+    },
+    {
+      "type": "image_picker",
+      "id": "giftImg",
+      "label": "Gift image"
+    },
+    {
+      "type": "checkbox",
+      "id": "pDetails",
+      "label": "Show product details",
+      "default": true,
+      "info": "Displays the product image, title, and crossed-out price."
+    },
+    {
+      "type": "color",
+      "id": "butCol",
+      "label": "Button background color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "butTextCol",
+      "label": "Button text color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "HovbutCol",
+      "label": "Button hover background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "HovbutTextCol",
+      "label": "Button hover text color",
+      "default": "#000"
+    }
+  ]
+}
+{% endschema %}

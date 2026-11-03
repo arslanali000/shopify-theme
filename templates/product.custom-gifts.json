@@ -1,0 +1,427 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "key_highlights_WRXPPz": {
+          "type": "key-highlights",
+          "disabled": true,
+          "source": "{{ product.metafields.custom.key_highlights.value }}",
+          "settings": {
+            "pkh_key_1": "{{ product.metafields.custom.key_highlights.value.key_1.value }}",
+            "pkh_key_2": "{{ product.metafields.custom.key_highlights.value.key_2.value }}",
+            "pkh_key_3": "{{ product.metafields.custom.key_highlights.value.key_3.value }}",
+            "pkh_key_4": "{{ product.metafields.custom.key_highlights.value.key_4.value }}",
+            "pkh_key_5": "{{ product.metafields.custom.key_highlights.value.key_5.value }}",
+            "pkh_key_6": "{{ product.metafields.custom.key_highlights.value.key_6.value }}",
+            "pkh_value_1": "{{ product.metafields.custom.key_highlights.value.value_1.value }}",
+            "pkh_value_2": "{{ product.metafields.custom.key_highlights.value.value_2.value }}",
+            "pkh_value_3": "{{ product.metafields.custom.key_highlights.value.value_3.value }}",
+            "pkh_value_4": "{{ product.metafields.custom.key_highlights.value.value_4.value }}",
+            "pkh_value_5": "{{ product.metafields.custom.key_highlights.value.value_5.value }}",
+            "pkh_value_6": "{{ product.metafields.custom.key_highlights.value.value_6.value }}"
+          }
+        },
+        "overlapping_images_FmbmeM": {
+          "type": "overlapping-images",
+          "settings": {
+            "overlapping_image_1": "shopify://shop_images/reveiw-img.jpg",
+            "overlapping_image_2": "shopify://shop_images/reveiw-img2.webp",
+            "overlapping_image_3": "shopify://shop_images/reveiw-img3.avif",
+            "overlapping_image_4": "shopify://shop_images/reveiw-img4.jpg",
+            "overlapping_image_5": "shopify://shop_images/reveiw-img5.avif",
+            "rating_count": 3.5
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_tmjDFk": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_usp.value }}",
+            "text_style": "uppercase"
+          }
+        },
+        "benefit_list_iMGqjj": {
+          "type": "benefit-list",
+          "source": "{{ product.metafields.custom.benefit_list.value }}",
+          "settings": {
+            "benefit_heading": "",
+            "benefit_1": "{{ product.metafields.custom.benefit_list.value.benefit_1.value }}",
+            "benefit_icon_1": "{{ product.metafields.custom.benefit_list.value.icon_1.value }}",
+            "benefit_2": "{{ product.metafields.custom.benefit_list.value.benefit_2.value }}",
+            "benefit_icon_2": "{{ product.metafields.custom.benefit_list.value.icon_2.value }}",
+            "benefit_3": "{{ product.metafields.custom.benefit_list.value.benefit_3.value }}",
+            "benefit_icon_3": "{{ product.metafields.custom.benefit_list.value.icon_3.value }}",
+            "benefit_4": "{{ product.metafields.custom.benefit_list.value.benefit_4.value }}",
+            "benefit_icon_4": "{{ product.metafields.custom.benefit_list.value.icon_4.value }}",
+            "benefit_5": "{{ product.metafields.custom.benefit_list.value.benefit_5.value }}",
+            "benefit_icon_5": "{{ product.metafields.custom.benefit_list.value.icon_5.value }}",
+            "benefit_6": "{{ product.metafields.custom.benefit_list.value.benefit_6.value }}",
+            "benefit_icon_6": "{{ product.metafields.custom.benefit_list.value.icon_6.value }}",
+            "benefit_7": "{{ product.metafields.custom.benefit_list.value.benefit_7.value }}",
+            "benefit_icon_7": "{{ product.metafields.custom.benefit_list.value.icon_7.value }}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "tiered_quantity_selector_8kBTdk": {
+          "type": "tiered_quantity_selector",
+          "settings": {
+            "option_1_label": "BUY 1",
+            "option_1_quantity": 1,
+            "option_1_discount_percentage": 0,
+            "option_1_badge_enable": false,
+            "option_1_badge_text": "Most Popular",
+            "option_2_label": "BUY 2",
+            "option_2_quantity": 2,
+            "option_2_discount_percentage": 20,
+            "option_2_badge_enable": true,
+            "option_2_badge_text": "Most Popular",
+            "option_3_label": "Buy 3",
+            "option_3_quantity": 3,
+            "option_3_discount_percentage": 30,
+            "option_3_badge_enable": false,
+            "option_3_badge_text": "Most Popular",
+            "show_quantity_label": true,
+            "quantity_label_text": "Select Quantity",
+            "per_unit_label": "unit",
+            "show_strikethrough": true,
+            "show_total_pricing": true,
+            "show_per_unit": true,
+            "show_savings_labels": true,
+            "show_zero_percent_savings": true,
+            "border_radius": 0.5,
+            "option_bottom_spacing": 2.5,
+            "label_font_size": 1.3,
+            "compare_price_font_size": 1,
+            "final_price_font_size": 1.3,
+            "per_unit_font_size": 1,
+            "text_color_unselected": "#121212",
+            "text_color_selected": "#ffffff",
+            "selected_button_bg_color": "#121212",
+            "savings_text_color": "#ffffff",
+            "savings_label_font_size": 1.1,
+            "savings_bg_color": "#334fb4",
+            "badge_bg_color": "#e33e3e",
+            "badge_font_size": 1,
+            "badge_font_color": "#ffffff"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_wyJUnY": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% render 'couple-name'%}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "trustbadge_icons_Ferm38": {
+          "type": "trustbadge-icons",
+          "disabled": true,
+          "settings": {
+            "number_of_icons": 4,
+            "trustbadge_icon_1": "shopify://shop_images/home_icon_50b16f2a-5b86-4240-bfe8-9d496fd67500.png",
+            "trustbadge_icon_2": "shopify://shop_images/collection_icon_a70da58b-f1d5-412b-a2d9-fb93ced2d2ce.jpg",
+            "trustbadge_icon_3": "shopify://shop_images/blog_icon_68de721f-0421-4d3a-b306-6416ececa0fa.png",
+            "trustbadge_icon_4": "shopify://shop_images/policies_icon_218f4502-3aa5-40a1-a1cd-62e5aeddd3a5.jpg"
+          }
+        },
+        "custom_liquid_DmH7Wx": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'delivery-date'%}"
+          }
+        },
+        "key_highlights_NViEEP": {
+          "type": "key-highlights",
+          "settings": {
+            "pkh_key_1": "Weigth",
+            "pkh_key_2": "Plates",
+            "pkh_key_3": "lock",
+            "pkh_key_4": "size",
+            "pkh_key_5": "Material",
+            "pkh_key_6": "",
+            "pkh_value_1": "",
+            "pkh_value_2": "",
+            "pkh_value_3": "",
+            "pkh_value_4": "",
+            "pkh_value_5": "",
+            "pkh_value_6": ""
+          }
+        },
+        "collapsible_tab_tCFtEY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "<p>Order will be delivered in 7-10 business days</p>",
+            "page": "data-sharing-opt-out"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "need_help_ajRYF3": {
+          "type": "need-help",
+          "settings": {
+            "help_title": "Need Help?",
+            "help_availibility": "Mon to Sat 10 AM to 5 PM",
+            "help_order_on_whatsapp": "923494627871",
+            "help_chat_on_whatsapp": "923494627871",
+            "help_support_email": "aliarslan@gmail.com"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "key_highlights_WRXPPz",
+        "overlapping_images_FmbmeM",
+        "title",
+        "text_tmjDFk",
+        "benefit_list_iMGqjj",
+        "price",
+        "variant_picker",
+        "tiered_quantity_selector_8kBTdk",
+        "quantity_selector",
+        "custom_liquid_wyJUnY",
+        "buy_buttons",
+        "trustbadge_icons_Ferm38",
+        "custom_liquid_DmH7Wx",
+        "key_highlights_NViEEP",
+        "collapsible_tab_tCFtEY",
+        "share",
+        "need_help_ajRYF3",
+        "description"
+      ],
+      "custom_css": [
+        "@media only screen and (max-width: 750px) {h1 {font-size: 30px; } .price--on-sale .price-item--regular {font-size: 1.1rem; }}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_content_6GcGzh": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_A6mmNw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Product Description",
+            "icon": "check_mark",
+            "row_content": "{{ product.description }}",
+            "page": ""
+          }
+        },
+        "collapsible_row_tJ9DyT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "plane",
+            "row_content": "",
+            "page": "shipping-policy"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_A6mmNw",
+        "collapsible_row_tJ9DyT"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_Nr9W8i": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xkgYUa": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.product_rich_text.value.heading.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_jf6Vxw": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>{{ product.metafields.custom.product_rich_text.value.paragraph | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xkgYUa",
+        "text_jf6Vxw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "176102710225ff1381": {
+      "type": "apps",
+      "blocks": {
+        "easyreviews_product_review_7GmTk9": {
+          "type": "shopify://apps/easyreviews/blocks/product_review/1341251b-09d7-46f3-ba6a-e732a50e97a5",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "easyreviews_product_review_7GmTk9"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "testimonial_section_cJpJAC": {
+      "type": "testimonial_section",
+      "blocks": {
+        "testimonial_tCKNxg": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img5.avif",
+            "customer_name": "Alexa",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_83L8YP": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img3.avif",
+            "customer_name": "David",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_RjeYEH": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img4.jpg",
+            "customer_name": "Sophia",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_G9D8Gm": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img2.webp",
+            "customer_name": "Natasha",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        },
+        "testimonial_ppqm8i": {
+          "type": "testimonial",
+          "settings": {
+            "customer_image": "shopify://shop_images/reveiw-img.jpg",
+            "customer_name": "Emily",
+            "customer_review": "I recently purchased a pair of sunglasses from this store and I am absolutely thrilled with my purchase! The quality is outstanding, the design is stylish, and they fit perfectly. I've received so many compliments on them already. Highly recommend!"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_tCKNxg",
+        "testimonial_83L8YP",
+        "testimonial_RjeYEH",
+        "testimonial_G9D8Gm",
+        "testimonial_ppqm8i"
+      ],
+      "name": "Testimonials",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "collapsible_content_6GcGzh",
+    "rich_text_Nr9W8i",
+    "176102710225ff1381",
+    "testimonial_section_cJpJAC"
+  ]
+}

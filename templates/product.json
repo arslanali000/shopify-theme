@@ -1,0 +1,244 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "key_highlights_WRXPPz": {
+          "type": "key-highlights",
+          "source": "{{ product.metafields.custom.key_highlights.value }}",
+          "settings": {
+            "pkh_key_1": "{{ product.metafields.custom.key_highlights.value.key_1.value }}",
+            "pkh_key_2": "{{ product.metafields.custom.key_highlights.value.key_2.value }}",
+            "pkh_key_3": "{{ product.metafields.custom.key_highlights.value.key_3.value }}",
+            "pkh_key_4": "{{ product.metafields.custom.key_highlights.value.key_4.value }}",
+            "pkh_key_5": "{{ product.metafields.custom.key_highlights.value.key_5.value }}",
+            "pkh_key_6": "{{ product.metafields.custom.key_highlights.value.key_6.value }}",
+            "pkh_value_1": "{{ product.metafields.custom.key_highlights.value.value_1.value }}",
+            "pkh_value_2": "{{ product.metafields.custom.key_highlights.value.value_2.value }}",
+            "pkh_value_3": "{{ product.metafields.custom.key_highlights.value.value_3.value }}",
+            "pkh_value_4": "{{ product.metafields.custom.key_highlights.value.value_4.value }}",
+            "pkh_value_5": "{{ product.metafields.custom.key_highlights.value.value_5.value }}",
+            "pkh_value_6": "{{ product.metafields.custom.key_highlights.value.value_6.value }}"
+          }
+        },
+        "overlapping_images_FmbmeM": {
+          "type": "overlapping-images",
+          "settings": {
+            "overlapping_image_1": "shopify://shop_images/reveiw-img.jpg",
+            "overlapping_image_2": "shopify://shop_images/reveiw-img2.webp",
+            "overlapping_image_3": "shopify://shop_images/reveiw-img3.avif",
+            "overlapping_image_4": "shopify://shop_images/reveiw-img4.jpg",
+            "overlapping_image_5": "shopify://shop_images/reveiw-img5.avif",
+            "rating_count": 3.5
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "custom_liquid_wyJUnY": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% render 'couple-name'%}"
+          }
+        },
+        "custom_liquid_RiNaeK": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'pin-code'%}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "key_highlights_NViEEP": {
+          "type": "key-highlights",
+          "settings": {
+            "pkh_key_1": "Weigth",
+            "pkh_key_2": "Plates",
+            "pkh_key_3": "lock",
+            "pkh_key_4": "size",
+            "pkh_key_5": "Material",
+            "pkh_key_6": "",
+            "pkh_value_1": "",
+            "pkh_value_2": "",
+            "pkh_value_3": "",
+            "pkh_value_4": "",
+            "pkh_value_5": "",
+            "pkh_value_6": ""
+          }
+        },
+        "collapsible_tab_tCFtEY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "<p>Order will be delivered in 7-10 business days</p>",
+            "page": "data-sharing-opt-out"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_ECkKjh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "key_highlights_WRXPPz",
+        "overlapping_images_FmbmeM",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_wyJUnY",
+        "custom_liquid_RiNaeK",
+        "buy_buttons",
+        "key_highlights_NViEEP",
+        "collapsible_tab_tCFtEY",
+        "share",
+        "description",
+        "judge_me_reviews_preview_badge_ECkKjh"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_Nr9W8i": {
+      "type": "rich-text",
+      "blocks": {
+        "text_jf6Vxw": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>Simplify your home workouts with our <strong>adjustable dumbbells set</strong> — a compact, all-in-one solution for strength training. Designed for versatility, these dumbbells let you easily adjust the weight to match your workout intensity. Whether you’re targeting arms, shoulders, chest, or legs, this single set replaces multiple traditional dumbbells.<br/>Built from high-grade steel with a secure locking mechanism, each adjustment feels smooth and stable. Ideal for beginners and pros who want efficient workouts without clutter. Space-saving design, anti-slip handle, and durable plates ensure long-term reliability. Perfect for home gyms, personal training, and fitness routines of all levels.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_jf6Vxw"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "176102710225ff1381": {
+      "type": "apps",
+      "blocks": {
+        "easyreviews_product_review_7GmTk9": {
+          "type": "shopify://apps/easyreviews/blocks/product_review/1341251b-09d7-46f3-ba6a-e732a50e97a5",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "easyreviews_product_review_7GmTk9"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17718240393db81585": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_bjwRDA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_bjwRDA"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "rich_text_Nr9W8i",
+    "176102710225ff1381",
+    "17718240393db81585"
+  ]
+}

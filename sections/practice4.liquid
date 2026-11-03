@@ -1,0 +1,73 @@
+{% comment %} Collection Tabs {% endcomment %}
+
+<style>
+ .collection_tabs_{{ section.id }}{
+   @media (max-width: 767px){
+   margin-left: -20px;
+   padding:0;
+  }
+ }
+ .collection_tabs_{{ section.id }} ul {
+  display: flex;
+  gap: 20px;
+  @media (max-width: 767px){
+  flex-wrap: none;
+  overflow-x: scroll;
+  overflow-y:hidden;
+  } 
+  
+ }
+ .collection_tabs_{{ section.id }} li {
+  list-style:none;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  
+ }
+ .collection_tabs_{{ section.id }} a {
+  display:flex;
+  flex-direction: column;
+  text-decoration: none;
+  color:black;
+  font-size: 16px;
+   @media (max-width: 767px){
+  width:max-content;
+  font-size: 12px;
+  } 
+
+  
+ }
+.collection_tabs_{{ section.id }} img {
+width:100%;
+height: 200px;
+ 
+}
+
+
+
+</style>
+
+<div class=" page-width collection_tabs_{{ section.id }}">
+ <ul>
+  {% for collection in collections %}
+   <li>
+    <a href="{{ collection.url }}">
+     {{ collection.image.src | image_url: 'master' | img_tag }}
+     {{ collection.title }}
+    </a>
+    </li>
+  {% endfor %}
+ </ul>
+</div>
+{% schema %}
+{
+"name": "A Tabs",
+"settings": [],
+"presets": [
+ {
+ "name": "A Tabs section"
+ }
+]
+}
+
+{% endschema %}

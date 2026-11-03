@@ -1,0 +1,119 @@
+
+{% comment %} Some input methods {% endcomment %}
+
+<style>
+ h1{
+   padding-top: {{ section.settings.padding_top }}rem;
+   font-size: {{ section.settings.font_size }}px;
+   text-align: {{ section.settings.heading_alignment }};
+
+}
+</style>
+<div class="page-width">
+    {{ section.settings.radio }}
+    {% if section.settings.show_heading == true %}
+    <h1>{{ section.settings.heading-text }}</h1>
+    {% endif %}
+    <p> {{ section.settings.paragraph-text }}</p>
+
+    {%  if section.settings.mylucky-number > 0 %}
+        {{ section.settings.mylucky-number }}
+    {% endif %}
+    
+</div>
+
+{% schema %}
+ {
+ "name": "Class 1",
+ "settings": [
+    {
+    "type": "text",
+    "id": "heading-text",
+    "label": "Heading"
+    },
+    {
+    "type": "textarea",
+    "id": "paragraph-text",
+    "label": "Write Paragraph",
+    "default": "Tell about your brand"
+    },
+    {
+    "type": "number",
+    "id": "mylucky-number",
+    "label": "Lucky Number",
+    "default": 786
+    },
+    {
+    "type": "range",
+    "id": "padding_top",
+    "label": "Padding Top",
+    "min": 2,
+    "max": 100,
+    "step": 2,
+    "unit": "rem",
+    "default": 2
+    },
+    {
+    "type": "range",
+    "id": "font_size",
+    "label": "Font Size",
+    "min": 12,
+    "max": 100,
+    "step": 2,
+    "unit": "px",
+    "default": 12
+    },
+    {
+    "type": "select",
+    "id": "heading_alignment",
+    "label": "Heading Alignment",
+    "options": [
+        {
+            "value": "left",
+            "label": "Left Align"
+        },
+        {
+            "value": "center",
+            "label": "Center Align"
+        },
+        {
+            "value": "right",
+            "label": "Right Align"
+        }
+        
+    ]
+    
+    },
+    {
+    "type": "checkbox",
+    "id": "show_heading",
+    "label": "Show Heading",
+    "default": true
+    },
+    {
+    "type": "radio",
+    "id": "radio",
+    "label": "Radio",
+    "options": [
+        
+        {
+            "value": "Video is Good",
+            "label": "Good"
+        },
+        {
+            "value": "Video is bad",
+            "label": "bad"
+        }
+        
+    ],
+    }
+    
+    
+ ],
+ "blocks": [],
+ "presets":[
+ {
+ "name": "Class 1"
+ }
+ ]}
+{% endschema %}
